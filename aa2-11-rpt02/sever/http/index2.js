@@ -3,12 +3,14 @@
 var http = require("http");
 port = 3000;
 
-var server = http.createServer(function(request, response  ) {
+var server = http.createServer((request, response) => {
   response.writeHeader(200, {
     "Content-Type": "text/plain"
   });
   response.write("Hello HTTP server from node.js"); // WEB response
-  response.write("\n");
+  response.write("\n ");
+  response.write("my id is aa11 \n");
+  console.log("conneted fron clint at" + new Date());
   response.end;
 
 });
